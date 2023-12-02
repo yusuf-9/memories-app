@@ -31,7 +31,7 @@ const ModalProvider = ({ children }: { children: React.ReactNode }) => {
         size: size,
       }));
     },
-    [modalState]
+    []
   );
 
   const closeModal = useCallback(() => {
@@ -39,7 +39,7 @@ const ModalProvider = ({ children }: { children: React.ReactNode }) => {
       ...prev,
       open: false,
     }));
-  }, [modalState]);
+  }, []);
 
   const values = useMemo(
     () => ({

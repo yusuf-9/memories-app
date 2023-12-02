@@ -2,9 +2,9 @@
 
 import React, { useCallback, useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
-import YearDropdown from "@/components/calendar/dropdown";
 import useModal from "@/hooks/useModal";
 import AddMemoryModal from "../modals/add-memory";
+import CalendarDropdown from "@/components/calendar/dropdown";
 
 const CalendarContainer = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -31,7 +31,7 @@ const CalendarContainer = () => {
         components={{
           CaptionLabel: () => null,
           Dropdown: props => {
-            return <YearDropdown {...props} />;
+            return <CalendarDropdown {...props} />;
           },
         }}
       />

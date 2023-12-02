@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 // components
 import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
-const YearDropdown = (props: any) => {
+const CalendarDropdown = (props: any) => {
   const { name, caption, onChange, children, className } = props;
 
   const reversedChildren = useMemo(() => [...children]?.reverse(), [children]);
@@ -23,7 +23,8 @@ const YearDropdown = (props: any) => {
           <DropdownMenuCheckboxItem
             key={item?.key}
             checked={item?.key === caption || item?.props?.children === caption}
-            onClick={() => onChange({ target: { value: item?.props?.value } })}>
+            onClick={() => onChange({ target: { value: item?.props?.value } })}
+            className="cursor-pointer">
             {name === "months" ? item?.props?.children : item?.props?.value}
           </DropdownMenuCheckboxItem>
         ))}
@@ -32,4 +33,4 @@ const YearDropdown = (props: any) => {
   );
 };
 
-export default YearDropdown;
+export default CalendarDropdown;
