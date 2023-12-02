@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-// Providers
+// Providers and contexts
 import { ThemeProvider } from "@/components/wrappers/theme-provider";
+import ModalProvider from "@/contexts/modal";
+
+//  global components
+import GlobalModal from "@/components/modals";
 
 // css
 import "./globals.css";
@@ -19,7 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="theme-mode">
-          {children}
+          <ModalProvider>
+            {children}
+            <GlobalModal />
+          </ModalProvider>
         </ThemeProvider>
       </body>
     </html>
