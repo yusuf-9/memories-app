@@ -3,7 +3,7 @@
 import React, { useCallback, useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import useModal from "@/hooks/useModal";
-import AddMemoryModal from "../modals/add-memory";
+import AddMemoryModal from "@/components/modals/add-memory";
 import CalendarDropdown from "@/components/calendar/dropdown";
 
 const CalendarContainer = () => {
