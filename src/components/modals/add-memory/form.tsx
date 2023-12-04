@@ -14,7 +14,6 @@ const AddMemoryForm = (props: any) => {
   const {
     formState: { errors, isSubmitting },
     control,
-    register,
     handleFormSubmit,
     handleSubmit,
     getValues
@@ -46,7 +45,7 @@ const AddMemoryForm = (props: any) => {
       </div>
       <div className="col-span-1">
         <Form {...props}>
-          <form onSubmit={(e) => {e.preventDefault(); handleSubmit(handleFormSubmit)}} className="space-y-8">
+          <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-8">
             <FormField
               control={control}
               name="memoryName"
@@ -99,8 +98,9 @@ const AddMemoryForm = (props: any) => {
                 </FormItem>
               )}
             />
-            <Button type="button" onClick={() => console.log(getValues(), errors)}>Log</Button>
-            <Button type="submit" disabled={isSubmitting}>Submit</Button>
+            <div>
+            <Button type="submit" disabled={isSubmitting} className="w-full">Submit</Button>
+            </div>
           </form>
         </Form>
       </div>
