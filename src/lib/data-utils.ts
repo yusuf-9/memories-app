@@ -7,4 +7,4 @@ export const getLastObjectKey = (object: {[key: number] : string}) : number => {
     return parseInt(objectKeys?.[objectKeys?.length - 1])
 }
 
-export const wait = async () => new Promise((resolve) => setTimeout(resolve, 1000))
+export const wait = async () => new Promise((resolve) => setTimeout(resolve, 1000));
