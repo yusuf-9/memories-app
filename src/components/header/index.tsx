@@ -15,7 +15,9 @@ export function Header() {
       <h1 className="font-normal">
         Memories
       </h1>
-      <ThemeToggle />
+      <div className="flex gap-5 items-center">
+        <ThemeToggle />
+      </div>
     </header>
   )
 }

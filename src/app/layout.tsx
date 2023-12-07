@@ -22,12 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="theme-mode">
-          <ModalProvider>
-            {children}
-            <GlobalModal />
-          </ModalProvider>
-        </ThemeProvider>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="theme-mode">
+            <ModalProvider>
+              {children}
+              <GlobalModal />
+            </ModalProvider>
+          </ThemeProvider>
       </body>
     </html>
   );
