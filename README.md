@@ -1,4 +1,4 @@
 # Memories
-## Memories is a social app for saving your memories in one place and share them with your friends
+## Memories is an app where you can easily share, store and manage and all your special memories together
 
 This project is under development and is live on https://memories-app-eta.vercel.app/
